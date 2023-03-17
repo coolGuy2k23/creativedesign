@@ -14,7 +14,7 @@ html {
 body {
 	font-family: 'Raleway', sans-serif;
 }
-
+//NAGŁOWEK NAGŁOWEK NAGŁOWek
 .header {
 	width: 100vw;
 	height: 30vh;
@@ -45,9 +45,9 @@ body {
 			color: white;
 			font-size: 1.2rem;
 		}
-        &-span{
-            color: rgb(247, 222, 0);
-        }
+		&-span {
+			color: rgb(247, 222, 0);
+		}
 	}
 	&__bg {
 		position: absolute;
@@ -58,3 +58,119 @@ body {
 		background-color: rgba($color: #080035, $alpha: 0.7);
 	}
 }
+//NAV NAV NAVN NAV NAV NAV NAV NAV NAV NAV NAV NAV
+
+.nav {
+	padding: 1rem 0;
+	background-color: rgb(56, 56, 56);
+	.wrapper {
+		margin: 0 auto;
+		width: 100%;
+		max-width: 1200px;
+	}
+	&__list {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		list-style-type: none;
+	}
+	&__item {
+		position: relative;
+		padding: 1rem 2rem;
+		margin-bottom: 1rem;
+		font-size: 2rem;
+		width: 15rem;
+		text-align: center;
+		text-transform: uppercase;
+		cursor: pointer;
+		&::before {
+			position: absolute;
+			content: '';
+			left: 0;
+			bottom: 0;
+			border-left: 2px solid white;
+			height: 100%;
+			transform: scaleY(0);
+			transition: transform 0.3s;
+			transform-origin: left;
+		}
+		&-link {
+			color: white;
+			text-decoration: none;
+			font-weight: bold;
+			transition: color 0.3s;
+		}
+		&:hover &-link {
+			color: rgb(247, 222, 0);
+		}
+
+		&:hover::before {
+			transform: scaleY(1);
+			transform-origin: right;
+		}
+	}
+}
+//main main main main main main
+.main {
+	padding: 4rem 0;
+	.wrapper {
+		margin: 0 auto;
+		width: 100%;
+		max-width: 1200px;
+	}
+	&__header {
+		text-align: center;
+		margin-bottom: 2rem;
+		font-size: 2.5rem;
+		text-transform: uppercase;
+	}
+	&__boxes {
+		padding: 1rem 2rem;
+	}
+
+	&__box {
+		margin-bottom: 2rem;
+		position: relative;
+		border-top-left-radius: 40px;
+		border-bottom-right-radius: 40px;
+		overflow: hidden;
+	}
+	&__img {
+		height: 35vh;
+		background-attachment: fixed;
+		background-size: cover;
+		background-position: center;
+	}
+	&__img-one {
+		background-image: url('../img/coffe.jpg');
+	}
+	&__img-two {
+		background-image: url('../img/phone.jpg');
+	}
+	&__img-three {
+		background-image: url('../img/buisness.jpg');
+	}
+	&__bg {
+		position: absolute;
+		top: 60%;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: rgba($color: #000000, $alpha: 0.7);
+		z-index: 100;
+	}
+	&__text {
+		position: absolute;
+		bottom: 15%;
+		left: 50%;
+		transform: translate(-50%, -15%);
+		text-align: center;
+		color: white;
+		z-index: 10000;
+	}
+}
+
+@import './small';
+@import './medium';
+@import './large';

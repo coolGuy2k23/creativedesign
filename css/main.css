@@ -56,4 +56,142 @@ body {
   width: 100%;
   height: 100%;
   background-color: rgba(8, 0, 53, 0.7);
+}
+
+.nav {
+  padding: 1rem 0;
+  background-color: rgb(56, 56, 56);
+}
+.nav .wrapper {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+}
+.nav__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+}
+.nav__item {
+  position: relative;
+  padding: 1rem 2rem;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  width: 15rem;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.nav__item::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  border-left: 2px solid white;
+  height: 100%;
+  transform: scaleY(0);
+  transition: transform 0.3s;
+  transform-origin: left;
+}
+.nav__item-link {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+.nav__item:hover .nav__item-link {
+  color: rgb(247, 222, 0);
+}
+.nav__item:hover::before {
+  transform: scaleY(1);
+  transform-origin: right;
+}
+
+.main {
+  padding: 4rem 0;
+}
+.main .wrapper {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+}
+.main__header {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+}
+.main__boxes {
+  padding: 1rem 2rem;
+}
+.main__box {
+  margin-bottom: 2rem;
+  position: relative;
+  border-top-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  overflow: hidden;
+}
+.main__img {
+  height: 35vh;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+.main__img-one {
+  background-image: url("../img/coffe.jpg");
+}
+.main__img-two {
+  background-image: url("../img/phone.jpg");
+}
+.main__img-three {
+  background-image: url("../img/buisness.jpg");
+}
+.main__bg {
+  position: absolute;
+  top: 60%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 100;
+}
+.main__text {
+  position: absolute;
+  bottom: 15%;
+  left: 50%;
+  transform: translate(-50%, -15%);
+  text-align: center;
+  color: white;
+  z-index: 10000;
+}
+
+@media (min-width: 768px) {
+  .header__text-h1 {
+    font-size: 5rem;
+  }
+  .header__text-paragraph {
+    font-size: 1.6rem;
+  }
+  .nav {
+    padding-top: 1rem;
+  }
+  .nav__list {
+    flex-direction: row;
+  }
+  .nav__item::before {
+    bottom: 0;
+    left: 0;
+    border-left: none;
+    border-bottom: 2px solid white;
+    width: 100%;
+    transform: scaleX(0);
+    transition: transform 0.3s;
+    transform-origin: right;
+  }
+  .nav__item:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
 }/*# sourceMappingURL=main.css.map */
