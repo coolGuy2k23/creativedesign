@@ -12,7 +12,10 @@
 	}
 	// NAWIGACJA NAWIGACJA NAWIGACJA NAWIGACJA
 	.nav {
+		position: sticky;
+		top: 0;
 		padding-top: 1rem;
+		z-index: 100000;
 		&__list {
 			flex-direction: row;
 		}
@@ -32,6 +35,26 @@
 				transform: scaleX(1);
 				transform-origin: left;
 			}
+		}
+	}
+
+	.main {
+		&__text {
+			position: absolute;
+			bottom: 10%;
+			left: 50%;
+			transform: translate(-50%, -10%);
+			text-align: center;
+			color: white;
+			z-index: 10000;
+		}
+		&__h3 {
+			font-size: 1.6rem;
+			margin-bottom: 1rem;
+			text-transform: uppercase;
+		}
+		&__text {
+			font-size: 1.2rem;
 		}
 	}
 }

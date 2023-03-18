@@ -1,0 +1,23 @@
+@media (min-width: 576px){
+    .main {
+
+        &__text {
+            position: absolute;
+            bottom: 5%;
+            left: 50%;
+            transform: translate(-50%, -5%);
+            text-align: center;
+            color: white;
+            z-index: 10000;
+        }
+        &__h3{
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+        &__text{
+            font-size: 1.2rem;
+        }
+    }
+    
+}
